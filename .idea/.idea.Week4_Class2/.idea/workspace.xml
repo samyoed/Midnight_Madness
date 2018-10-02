@@ -13,32 +13,43 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="463" />
+          <entry key="cs" value="1658" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="463" />
+          <entry key="C#" value="1658" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CarControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+            <state relative-caret-position="465">
+              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
               <folding>
-                <marker date="1538057344715" expanded="true" signature="6:78" ph="..." />
+                <marker date="1538057344715" expanded="false" signature="6:78" ph="..." />
                 <marker date="1538057344715" expanded="true" signature="120:694" ph="{...}" />
                 <marker date="1538057344715" expanded="true" signature="290:333" ph="{...}" />
                 <marker date="1538057344715" expanded="true" signature="387:546" ph="{...}" />
@@ -48,15 +59,79 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/FirstPerson.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <marker date="1538454240534" expanded="true" signature="6:137" ph="..." />
+                <marker date="1538454240534" expanded="true" signature="181:1455" ph="{...}" />
+                <marker date="1538454240534" expanded="true" signature="392:399" ph="{...}" />
+                <marker date="1538454240534" expanded="true" signature="454:1453" ph="{...}" />
+                <marker date="1538454240534" expanded="true" signature="559:663" ph="/* if left or right keys are pressed, then slow down a lot or speed up, ... */" />
+                <marker date="1538454240534" expanded="true" signature="717:771" ph="{...}" />
+                <marker date="1538454240534" expanded="true" signature="1011:1171" ph="/* multiplying by time.delta time makes it more consistent between machines ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/textScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <marker date="1538452172599" expanded="false" signature="6:78" ph="..." />
+                <marker date="1538452172599" expanded="true" signature="119:334" ph="{...}" />
+                <marker date="1538452172599" expanded="true" signature="202:332" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BackgroundScroll.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+              <folding>
+                <marker date="1538450318349" expanded="false" signature="6:78" ph="..." />
+                <marker date="1538450318349" expanded="true" signature="125:2140" ph="{...}" />
+                <marker date="1538450318349" expanded="true" signature="479:842" ph="{...}" />
+                <marker date="1538450318349" expanded="true" signature="704:771" ph="{...}" />
+                <marker date="1538450318349" expanded="true" signature="869:1428" ph="{...}" />
+                <marker date="1538450318349" expanded="true" signature="1483:1785" ph="{...}" />
+                <marker date="1538450318349" expanded="true" signature="1840:2134" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lastright</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/BackgroundScroll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CarControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirstPerson.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/textScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/CarControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/BackgroundScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/textScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstPerson.cs" />
       </list>
     </option>
   </component>
@@ -77,10 +152,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
@@ -131,11 +206,12 @@
       <updated>1538055969723</updated>
       <workItem from="1538055972940" duration="30000" />
       <workItem from="1538056055861" duration="1288000" />
+      <workItem from="1538446005328" duration="6943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1318000" />
+    <option name="totallyTimeSpent" value="8261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -150,10 +226,9 @@
     <frame x="-6" y="-6" width="1861" height="1093" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07598447" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0765391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -168,6 +243,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,14 +273,58 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/CarControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        <state relative-caret-position="465">
+          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding>
-            <marker date="1538057344715" expanded="true" signature="6:78" ph="..." />
+            <marker date="1538057344715" expanded="false" signature="6:78" ph="..." />
             <marker date="1538057344715" expanded="true" signature="120:694" ph="{...}" />
             <marker date="1538057344715" expanded="true" signature="290:333" ph="{...}" />
             <marker date="1538057344715" expanded="true" signature="387:546" ph="{...}" />
             <marker date="1538057344715" expanded="true" signature="567:692" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BackgroundScroll.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding>
+            <marker date="1538450318349" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538450318349" expanded="true" signature="125:2140" ph="{...}" />
+            <marker date="1538450318349" expanded="true" signature="479:842" ph="{...}" />
+            <marker date="1538450318349" expanded="true" signature="704:771" ph="{...}" />
+            <marker date="1538450318349" expanded="true" signature="869:1428" ph="{...}" />
+            <marker date="1538450318349" expanded="true" signature="1483:1785" ph="{...}" />
+            <marker date="1538450318349" expanded="true" signature="1840:2134" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/textScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <marker date="1538452172599" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538452172599" expanded="true" signature="119:334" ph="{...}" />
+            <marker date="1538452172599" expanded="true" signature="202:332" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FirstPerson.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <marker date="1538454240534" expanded="true" signature="6:137" ph="..." />
+            <marker date="1538454240534" expanded="true" signature="181:1455" ph="{...}" />
+            <marker date="1538454240534" expanded="true" signature="392:399" ph="{...}" />
+            <marker date="1538454240534" expanded="true" signature="454:1453" ph="{...}" />
+            <marker date="1538454240534" expanded="true" signature="559:663" ph="/* if left or right keys are pressed, then slow down a lot or speed up, ... */" />
+            <marker date="1538454240534" expanded="true" signature="717:771" ph="{...}" />
+            <marker date="1538454240534" expanded="true" signature="1011:1171" ph="/* multiplying by time.delta time makes it more consistent between machines ... */" />
           </folding>
         </state>
       </provider>
