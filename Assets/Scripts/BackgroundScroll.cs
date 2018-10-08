@@ -15,7 +15,8 @@ public class BackgroundScroll : MonoBehaviour
     public float backgroundSize;
     public float parallaxSpeed;
     public float zPos;
-
+    
+    public GameObject car1;
     
     private void Start()
     {
@@ -44,12 +45,15 @@ public class BackgroundScroll : MonoBehaviour
             ScrollLeft();
 
         if (cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
+        {
             ScrollRight();
-
+            //Instantiate(car1, transform.position, transform.rotation);
+            Debug.Log("generated");
+        }
     }
 
 
-
+// just in case I maybe want to go left
     private void ScrollLeft() // call if going left
     {
         //int lastRight = rightIndex;
@@ -58,6 +62,8 @@ public class BackgroundScroll : MonoBehaviour
         rightIndex--;
         if (rightIndex < 0)
             rightIndex = layers.Length - 1;
+        //generate cars
+        //Instantiate(car1, transform.position, transform.rotation);
     }
 
     private void ScrollRight() // call if going right
@@ -68,6 +74,8 @@ public class BackgroundScroll : MonoBehaviour
         leftIndex++;
         if (leftIndex == layers.Length)
             leftIndex = 0;
+        //generate cars
+       
     }
 
 
