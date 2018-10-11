@@ -16,13 +16,22 @@ public class car1Script : MonoBehaviour
 		//Destroy (gameObject, 10f);
 		
 		//will vary car speeds
-		carSpeed += Random.Range(-5, 5);
+		
 		player = GameObject.FindWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		float speedLimit = player.GetComponent<FirstPerson>().currentSpeedLimit; 
+		float carSpod = speedLimit + Random.Range(-5, 5);
+		
+		if(carSpod > carSpeed)
+			carSpeed = carSpeed +.5f;
+		if (carSpod < carSpeed)
+			carSpeed = carSpeed -.5f;
+		
+		
 		if (Vector3.Distance(player.transform.position, transform.position) > 200)
 		{
 			Destroy(gameObject);

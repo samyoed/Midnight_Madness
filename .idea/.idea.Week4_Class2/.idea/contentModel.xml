@@ -8,9 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BackgroundScroll.cs" t="Include" />
+          <e p="CameraControl.cs" t="Include" />
           <e p="car1Script.cs" t="Include" />
           <e p="CarControl.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
+          <e p="SpeedLimitScript.cs" t="Include" />
           <e p="textScript.cs" t="Include" />
         </e>
       </e>
