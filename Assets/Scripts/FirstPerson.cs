@@ -17,9 +17,10 @@ public class FirstPerson : MonoBehaviour
     public float exploPower;
     public float exploRadius;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public float currentSpeedLimit;
+    public float supiidorimeto;
 
 
     public TextMesh speedText;
@@ -74,12 +75,21 @@ public class FirstPerson : MonoBehaviour
         else
         {
             carSpeed = -GetComponent<Rigidbody>().velocity.x;
+            transform.GetComponent<Rigidbody>().freezeRotation = false;
         }
 
+        if (supiidorimeto < currentSpeedLimit)
+            supiidorimeto++;
+        if (supiidorimeto > currentSpeedLimit)
+            supiidorimeto--;
+
+        
+        
+        
         //sets speedometer text
         float speedRound = (int) carSpeed;
         speedText.text = ("MPH: " + speedRound);
-        speedLimit.text = ("Limit: " + currentSpeedLimit);
+        speedLimit.text = ("Limit: " + supiidorimeto);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -90,7 +100,7 @@ public class FirstPerson : MonoBehaviour
         float randomNum2;
         if (other.gameObject.CompareTag("carSpawn"))
         {
-            for (int k = 0; k < 2; k++)
+            for (int k = 0; k < 1; k++)
             {
                 randomX = Random.Range(-3f, 3f);
                 randomNum2 = Random.Range(20f, 70f);
@@ -107,7 +117,7 @@ public class FirstPerson : MonoBehaviour
             Vector3 explosionPos = new Vector3();
             explosionPos = (transform.position + other.gameObject.transform.position) / 2;
             isDead = true;
-            GetComponent<Rigidbody>().AddExplosionForce(exploPower, explosionPos, exploRadius, 3.0F);
+            GetComponent<Rigidbody>().AddExplosionForce(exploPower, explosionPos, exploRadius, .5f);
             //lose game
         }
     }

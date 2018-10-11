@@ -27,9 +27,9 @@ public class car1Script : MonoBehaviour
 		float carSpod = speedLimit + Random.Range(-5, 5);
 		
 		if(carSpod > carSpeed)
-			carSpeed = carSpeed +.5f;
+			carSpeed = carSpeed +.1f;
 		if (carSpod < carSpeed)
-			carSpeed = carSpeed -.5f;
+			carSpeed = carSpeed -.1f;
 		
 		
 		if (Vector3.Distance(player.transform.position, transform.position) > 200)
