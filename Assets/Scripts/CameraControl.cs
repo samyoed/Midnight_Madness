@@ -14,7 +14,7 @@ public class CameraControl : MonoBehaviour {
 
 	void Start()
 	{
-		transform.GetComponent<Rigidbody>().freezeRotation = true;
+		//transform.GetComponent<Rigidbody>().freezeRotation = true;
 
 	}
 	

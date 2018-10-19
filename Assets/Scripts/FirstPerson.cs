@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 
 public class FirstPerson : MonoBehaviour
@@ -17,7 +19,7 @@ public class FirstPerson : MonoBehaviour
     public float exploPower;
     public float exploRadius;
 
-    public bool isDead = false;
+    public bool isDead;
 
     public float currentSpeedLimit;
     public float supiidorimeto;
@@ -25,8 +27,26 @@ public class FirstPerson : MonoBehaviour
 
     public TextMesh speedText;
     public TextMesh speedLimit;
+    public TextMesh distText;
 
     public GameObject car1;
+
+    private Vector3 origin;
+    
+    //For the dissolve effect.
+    public MeshRenderer myRenderer;
+    private Material myMaterial;
+
+    private bool pressedKey;
+    private float dissolveOverTime;
+
+    public float speed = 0.75f;
+    public int intMeters;
+
+    public GameObject scoreKeeper;
+    
+   
+    
 
     void Awake()
     {
@@ -38,11 +58,27 @@ public class FirstPerson : MonoBehaviour
 
         //Sets speed limit to 60, all other cars will be going at that speed
         StartCoroutine("Change60");
+        origin = transform.position;
+        
+        
+
+        myMaterial = myRenderer.material;
+        print(myMaterial);
+
+        myMaterial.SetFloat("Vector1_648518FD", -1);
+        
+        dissolveOverTime = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        ScoreScript.score = intMeters;
+        if (ScoreScript.score > ScoreScript.highScore)
+            ScoreScript.highScore = ScoreScript.score; 
+        
+        
         if (!isDead)
         {
             float vertical = Input.GetAxis("Vertical");
@@ -71,11 +107,20 @@ public class FirstPerson : MonoBehaviour
 
             //freezes rotation
             transform.GetComponent<Rigidbody>().freezeRotation = true;
+            //dissolve on enter
+            dissolveOverTime -= Time.deltaTime * speed;
+            myMaterial.SetFloat("Vector1_648518FD", dissolveOverTime);
+            
         }
         else
         {
             carSpeed = -GetComponent<Rigidbody>().velocity.x;
             transform.GetComponent<Rigidbody>().freezeRotation = false;
+            //dissolve on death
+            dissolveOverTime += Time.deltaTime * speed;
+            myMaterial.SetFloat("Vector1_648518FD", dissolveOverTime);
+
+           
         }
 
         if (supiidorimeto < currentSpeedLimit)
@@ -83,13 +128,17 @@ public class FirstPerson : MonoBehaviour
         if (supiidorimeto > currentSpeedLimit)
             supiidorimeto--;
 
+        float meters = Vector3.Distance(origin, transform.position);
         
         
         
         //sets speedometer text
         float speedRound = (int) carSpeed;
+        intMeters = Mathf.RoundToInt(meters);
         speedText.text = ("MPH: " + speedRound);
         speedLimit.text = ("Limit: " + supiidorimeto);
+        distText.text = ("Meters: \n" + intMeters);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -100,13 +149,19 @@ public class FirstPerson : MonoBehaviour
         float randomNum2;
         if (other.gameObject.CompareTag("carSpawn"))
         {
-            for (int k = 0; k < 1; k++)
+            for (int k = 0; k < 3; k++)
             {
                 randomX = Random.Range(-3f, 3f);
                 randomNum2 = Random.Range(20f, 70f);
                 Instantiate(car1, new Vector3(transform.position.x - randomNum2, transform.position.y, randomX),
                     transform.rotation);
             }
+        }
+        
+        //if player clips through the road, teleport back to road
+        if (other.gameObject.CompareTag("goBack"))
+        {
+            transform.position += new Vector3(transform.position.x, 10, transform.position.y);
         }
     }
 
@@ -119,7 +174,12 @@ public class FirstPerson : MonoBehaviour
             isDead = true;
             GetComponent<Rigidbody>().AddExplosionForce(exploPower, explosionPos, exploRadius, .5f);
             //lose game
+            StartCoroutine("DeadSequence");
+
+
         }
+
+       
     }
 
     //speed limit will switch back and forth between 60 and 30 every 5-15 seconds
@@ -136,4 +196,21 @@ public class FirstPerson : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(5, 15));
         StartCoroutine("Change60");
     }
+
+    IEnumerator DeadSequence()
+    {
+        yield return new WaitForSeconds(.5f);
+        
+        GetComponent<BoxCollider>().enabled = false;
+        dissolveOverTime = -1;
+        StartCoroutine("SwitchScene");
+    }
+
+    IEnumerator SwitchScene()
+    {
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene("Replay");
+
+    }
+    
 }
