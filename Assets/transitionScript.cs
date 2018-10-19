@@ -19,5 +19,10 @@ public class transitionScript : MonoBehaviour {
 			SceneManager.LoadScene("Main Scene");
 
 		}
+		if(Input.GetKeyDown(KeyCode.B))
+		{
+			SceneManager.LoadScene("Home");
+
+		}
 	}
 }

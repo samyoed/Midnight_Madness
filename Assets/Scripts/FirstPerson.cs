@@ -35,8 +35,12 @@ public class FirstPerson : MonoBehaviour
     
     //For the dissolve effect.
     public MeshRenderer myRenderer;
+    public MeshRenderer myRenderer1;
+    public MeshRenderer myRenderer2;
+    
     private Material myMaterial;
-
+    private Material myMaterial1;
+    private Material myMaterial2;
     private bool pressedKey;
     private float dissolveOverTime;
 
@@ -63,9 +67,13 @@ public class FirstPerson : MonoBehaviour
         
 
         myMaterial = myRenderer.material;
+        myMaterial1 = myRenderer1.material;
+        myMaterial2 = myRenderer2.material;
         print(myMaterial);
 
         myMaterial.SetFloat("Vector1_648518FD", -1);
+        myMaterial1.SetFloat("Vector1_648518FD", -1);
+        myMaterial2.SetFloat("Vector1_648518FD", -1);
         
         dissolveOverTime = 1;
     }
@@ -110,6 +118,8 @@ public class FirstPerson : MonoBehaviour
             //dissolve on enter
             dissolveOverTime -= Time.deltaTime * speed;
             myMaterial.SetFloat("Vector1_648518FD", dissolveOverTime);
+            myMaterial1.SetFloat("Vector1_648518FD", dissolveOverTime);
+            myMaterial2.SetFloat("Vector1_648518FD", dissolveOverTime);
             
         }
         else
@@ -119,6 +129,8 @@ public class FirstPerson : MonoBehaviour
             //dissolve on death
             dissolveOverTime += Time.deltaTime * speed;
             myMaterial.SetFloat("Vector1_648518FD", dissolveOverTime);
+            myMaterial1.SetFloat("Vector1_648518FD", dissolveOverTime);
+            myMaterial2.SetFloat("Vector1_648518FD", dissolveOverTime);
 
            
         }
